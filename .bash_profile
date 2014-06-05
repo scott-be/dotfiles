@@ -1,0 +1,24 @@
+# Color ls
+export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# Highlight grep matches
+export GREP_OPTIONS='--color=auto'
+
+# Update php - http://php-osx.liip.ch/#faq - scott
+export PATH=/usr/local/php5/bin:$PATH
+
+## Prompt
+# Bold
+#export PS1="\[$(tput setaf 2)\]\[(tput bold)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
+
+# Non Bold
+#export PS1="\[$(tput setaf 2)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
+
+# Ubuntu Style
+export PS1='\[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[00;31m\]\w\[\033[00m\]\$ '
+
+## Aliases
+alias la='ls -a'
+alias kd='killall Dock'
+alias ll="ls -lahG"
