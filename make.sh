@@ -16,7 +16,7 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 	echo "Linking general folder:"
 		for file in $DIR/general/*; do
 			echo " [X] Linking ${file##*/}..."
-			# ln -s "$file" "$HOME/.${file##*/}"
+			ln -s "$file" "$HOME/.${file##*/}"
 		done
 	echo "...done"
 
@@ -25,7 +25,7 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 		echo "Linking Mac Folder:"
 		for file in $DIR/mac/*; do
 			echo " [X] Linking ${file##*/}..."
-			# ln -s "$file" "$HOME/.${file##*/}"
+			ln -s "$file" "$HOME/.${file##*/}"
 		done
 		echo "...done"
 	else
@@ -33,7 +33,7 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 		echo "Linking Linux Folder:"
 		for file in $DIR/linux/*; do
 			echo " [X] Linking ${file##*/}..."
-			# ln -s "$file" "$HOME/.${file##*/}"
+			ln -s "$file" "$HOME/.${file##*/}"
 		done
 		echo "...done"
 	fi
