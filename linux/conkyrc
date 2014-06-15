@@ -13,6 +13,10 @@ background no
 #font *mintsmild.se*
 #font -*-*-*-*-*-*-34-*-*-*-*-*-*-*
 
+## remove window shadow - scott fix
+own_window_argb_visual yes
+own_window_argb_value 0
+
 # Use Xft?
 use_xft yes
 
