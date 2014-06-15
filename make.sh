@@ -23,7 +23,7 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 	if [ "$input" -eq "1" ]; then
 		# Link files in the Mac folder
 		echo "Linking Mac Folder:"
-		for file in $DIR/mac/*; do
+		for file in $DIR/osx/*; do
 			echo " [X] Linking ${file##*/}..."
 			ln -sf "$file" "$HOME/.${file##*/}"
 		done
