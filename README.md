@@ -14,4 +14,4 @@ Files in each folder are unhidden (without a dot prefix) to make them easier to 
 
 ## using the script
 * Run `dotfiles/make.sh` and enter the 1 for Mac or 2 for Linux. 
-* The script will loop each folder (the general plus the osx folder if you selected OSX or linux folder if you selected Linux) and create symlinks in your home directory
+* The script will loop each folder (the general folder plus the osx folder if you selected OSX or linux folder if you selected Linux) and create symlinks in your home directory.
