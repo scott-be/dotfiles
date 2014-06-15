@@ -5,7 +5,7 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 # Choose the OS - this will tell the script what folder to copy
 echo "Choose OS:"
-echo " [1] Mac"
+echo " [1] OS X"
 echo " [2] Linux"
 read -p "> " input
 
