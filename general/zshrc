@@ -10,6 +10,10 @@ ZSH_THEME="dst-scott"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias la='ls -a'
+alias kd='killall Dock'
+alias ll='ls -lahG'
+alias subl='"/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"'
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
