@@ -15,6 +15,7 @@ alias kd='killall Dock'
 alias ll='ls -lahG'
 alias subl='"/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"'
 alias pyweb='python -m SimpleHTTPServer'
+alias sshrm='ssh-keygen -R'
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
