@@ -15,13 +15,20 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 	# Link files in the general folder
 	echo "Linking general folder:"
 		for file in $DIR/general/*; do
-
-			if [ ${file##*/} == "README.md" ]; then
-				continue # ignore readme files
+			# Create symlinks for files in general/
+			if [ -f $file  -a ${file##*/} != "README.md" ]; then # Filter for only files and ignore the file README.md
+				echo " [X] Linking ${file##*/}..."
+				ln -sf "$file" "$HOME/.${file##*/}" # Create symlink
 			fi
-			echo " [X] Linking ${file##*/}..."
-			ln -sf "$file" "$HOME/.${file##*/}"
-			
+
+			# Create symlinks for directories in general/
+			if [[ -d $file ]]; then # Filter for only directories
+				for file2 in $file/*; do
+					echo " [X] Linking files in ${file##*/}/${file2##*/}..."
+					mkdir -p $HOME/.config/${file2##*/} # Create DIR if not exist
+					ln -sf $file2/* "$HOME/.${file##*/}/${file2##*/}" # Create symlink
+				done
+			fi
 		done
 	echo "...done"
 
@@ -30,11 +37,20 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 		echo "Linking Mac Folder:"
 		for file in $DIR/osx/*; do
 
-			if [ ${file##*/} == "README.md" ]; then
-				continue # ignore readme files
+			# Create symlinks for files in osx/
+			if [ -f $file  -a ${file##*/} != "README.md" ]; then # Filter for only files and ignore the file README.md
+				echo " [X] Linking ${file##*/}..."
+				ln -sf "$file" "$HOME/.${file##*/}" # Create symlink
 			fi
-			echo " [X] Linking ${file##*/}..."
-			ln -sf "$file" "$HOME/.${file##*/}"
+
+			# Create symlinks for directories in osx/
+			if [[ -d $file ]]; then # Filter for only directories
+				for file2 in $file/*; do
+					echo " [X] Linking files in ${file##*/}/${file2##*/}..."
+					mkdir -p $HOME/.config/${file2##*/} # Create DIR if not exist
+					ln -sf $file2/* "$HOME/.${file##*/}/${file2##*/}" # Create symlink
+				done
+			fi
 
 		done
 		echo "...done"
@@ -43,11 +59,20 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 		echo "Linking Linux Folder:"
 		for file in $DIR/linux/*; do
 
-			if [ ${file##*/} == "README.md" ]; then
-				continue # ignore readme files
+			# Create symlinks for files in linux/
+			if [ -f $file  -a ${file##*/} != "README.md" ]; then # Filter for only files and ignore the file README.md
+				echo " [X] Linking ${file##*/}..."
+				ln -sf "$file" "$HOME/.${file##*/}" # Create symlink
 			fi
-			echo " [X] Linking ${file##*/}..."
-			ln -sf "$file" "$HOME/.${file##*/}"
+
+			# Create symlinks for directories in linux/
+			if [[ -d $file ]]; then # Filter for only directories
+				for file2 in $file/*; do
+					echo " [X] Linking files in ${file##*/}/${file2##*/}..."
+					mkdir -p $HOME/.config/${file2##*/} # Create DIR if not exist
+					ln -sf $file2/* "$HOME/.${file##*/}/${file2##*/}" # Create symlink
+				done
+			fi
 
 		done
 		echo "...done"
