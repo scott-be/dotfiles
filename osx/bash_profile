@@ -23,4 +23,6 @@ alias la='ls -a'
 alias kd='killall Dock'
 alias ll='ls -lahG'
 alias mc='mc -x' # Force xterm mode to start with mouse support
+alias sshrm='ssh-keygen -R' # Alias to remove ssh keys
+
 alias subl='"/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"'
