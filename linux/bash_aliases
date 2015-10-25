@@ -1,2 +1,5 @@
 alias open='nautilus'
 alias mc='mc -x' # Open midnight commander with xterm support (allows mouse click events from within tmux)
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'

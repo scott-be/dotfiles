@@ -4,10 +4,16 @@
 DIR="$( cd "$( dirname "$0" )" && pwd )" 
 
 # Choose the OS - this will tell the script what folder to copy
-echo "Choose OS:"
-echo " [1] OS X"
-echo " [2] Linux"
-read -p "> " input
+ARG=$1
+case $ARG in
+   "--osx") input='1';;
+   "--linux") input='2';;
+   *) echo "Choose OS:"
+	  echo " [1] OS X"
+	  echo " [2] Linux"
+	  read -p "> " input
+	;;
+esac
 
 # Validate input
 if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
