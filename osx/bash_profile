@@ -10,6 +10,10 @@ export PATH=/usr/local/php5/bin:$PATH
 
 # Set editor
 export EDITOR='vim'
+
+# tmuxinator completion
+source ~/.bin/tmuxinator.bash
+
 ## Prompt
 # Bold
 #export PS1="\[$(tput setaf 2)\]\[(tput bold)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
