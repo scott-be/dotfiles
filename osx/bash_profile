@@ -8,6 +8,8 @@ export GREP_OPTIONS='--color=auto'
 # Update php - http://php-osx.liip.ch/#faq - scott
 export PATH=/usr/local/php5/bin:$PATH
 
+# Set editor
+export EDITOR='vim'
 ## Prompt
 # Bold
 #export PS1="\[$(tput setaf 2)\]\[(tput bold)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
