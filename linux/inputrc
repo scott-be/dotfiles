@@ -1,4 +1,8 @@
-## arrow up
+## Arrow Up Search
 "\e[A":history-search-backward
-## arrow down
+
+## Arrow Down Search
 "\e[B":history-search-forward
+
+## Disable Terminal Bell
+set bell-style none
