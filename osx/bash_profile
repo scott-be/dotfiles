@@ -31,6 +31,8 @@ alias ll='ls -lahG'
 alias mc='mc -x' # Force xterm mode to start with mouse support
 alias sshrm='ssh-keygen -R' # Alias to remove ssh keys
 alias subl='"/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"'
+alias tms='tmuxinator start'
+alias tmls='tmux ls'
 
 # MacPorts Installer addition on 2015-07-14_at_18:18:23: adding an appropriate PATH variable for use with MacPorts.
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
