@@ -12,7 +12,7 @@ export PATH=/usr/local/php5/bin:$PATH
 export EDITOR='vim'
 
 # tmuxinator completion
-source ~/.bin/tmuxinator.bash
+source /Library/Ruby/Gems/2.0.0/gems/tmuxinator-0.7.1/completion/tmuxinator.bash
 
 ## Prompt
 # Bold
