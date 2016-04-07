@@ -6,3 +6,7 @@
 
 ## Disable Terminal Bell
 set bell-style none
+
+## Ctrl arrow word jump
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
