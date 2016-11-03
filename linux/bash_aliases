@@ -3,3 +3,5 @@ alias mc='mc -x' # Open midnight commander with xterm support (allows mouse clic
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias wmip='curl ifconfig.co'
+alias wimip='curl ifconfig.co'
