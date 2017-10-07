@@ -1,60 +1,41 @@
-# Color ls
+#############
+## Options ##
+#############
+## Color ls
 export CLICOLOR=1
 export LSCOLORS=Exfxcxdxbxegedabagacad
 
-# Highlight grep matches
+## Highlight grep matches
 export GREP_OPTIONS='--color=auto'
 
-# Update php - http://php-osx.liip.ch/#faq - scott
-export PATH=/usr/local/php5/bin:$PATH
-
-# Set editor
+## Set editor
 export EDITOR='vim'
 
-# tmuxinator completion
-source /Library/Ruby/Gems/2.0.0/gems/tmuxinator-0.7.1/completion/tmuxinator.bash
-
-## Prompt
-# Bold
-#export PS1="\[$(tput setaf 2)\]\[(tput bold)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
-
-# Non Bold
-#export PS1="\[$(tput setaf 2)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
-
-# Ubuntu Style
+############
+## Prompt ##
+############
+## Ubuntu Style
 export PS1='\[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[00;31m\]\w\[\033[00m\]\$ '
 
-## Aliases
+## Bold
+#export PS1="\[$(tput setaf 2)\]\[(tput bold)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
+
+## Non Bold
+#export PS1="\[$(tput setaf 2)\]\h:\W \u\\$ \[$(tput setaf 2)\]\[$(tput sgr0)\]"
+
+#############
+## Aliases ##
+#############
 alias la='ls -a'
 alias kd='killall Dock'
 alias ll='ls -lahG'
 alias mc='mc -x' # Force xterm mode to start with mouse support
 alias sshrm='ssh-keygen -R' # Alias to remove ssh keys
 alias subl='"/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"'
-alias tms='tmuxinator start'
 alias tmls='tmux ls'
 alias pyweb='python -m SimpleHTTPServer' # Quick and simple webserver
 
-# MacPorts Installer addition on 2015-07-14_at_18:18:23: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
-
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
-
-# Setting PATH for Python 3.5
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-export PATH
-
-# MacPorts Installer addition on 2015-10-26_at_23:34:20: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
-
+##########
+## Path ##
+##########
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
