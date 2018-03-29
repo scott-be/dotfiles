@@ -10,3 +10,8 @@ set bell-style none
 ## Ctrl arrow word jump
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
+
+## Ctrl+backspace delete word
+"\C-H":"\C-W"
+
+## Tip: You can see keycodes by pressing Ctrl+v then the key.
