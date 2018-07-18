@@ -1,3 +1,6 @@
+###########
+# Aliases #
+###########
 alias open='nautilus'
 alias mc='mc -x' # Open midnight commander with xterm support (allows mouse click events from within tmux)
 alias ll='ls -alF'
@@ -10,3 +13,12 @@ alias inst='sudo apt install'
 alias ipa='ip -brief address'
 alias ipl='ip -brief link'
 alias pbcopy="xclip -selection clipboard"
+
+#############
+# Functions #
+#############
+# Convert string to LM:NTLM password hash
+nthash() { echo $1 | python -c 'import sys,hashlib,binascii; hash = hashlib.new("md4", sys.stdin.readlines()[0].strip("\n").encode("utf-16le")).digest(); print "aad3b435b51404eeaad3b435b51404ee:{}".format(binascii.hexlify(hash))'; }
+
+# Display csv files in the console
+csvview() { column -s, -t < "$1" | less -#2 -N -S; }
