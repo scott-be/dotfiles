@@ -13,6 +13,7 @@ alias inst='sudo apt install'
 alias ipa='ip -brief address'
 alias ipl='ip -brief link'
 alias pbcopy="xclip -selection clipboard"
+alias pping='prettyping --nolegend'
 
 #############
 # Functions #
