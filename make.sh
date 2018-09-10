@@ -74,9 +74,14 @@ if [ "$input" -eq "1" -o "$input" -eq "2" ]; then
 			# Create symlinks for directories in linux/
 			if [[ -d $file ]]; then # Filter for only directories
 				for file2 in $file/*; do
-					echo " [X] Linking files in ${file##*/}/${file2##*/}..."
-					mkdir -p $HOME/.config/${file2##*/} # Create DIR if not exist
-					ln -sf $file2/* "$HOME/.${file##*/}/${file2##*/}" # Create symlink
+                    if  [[ -d $file2 ]]; then # Filter for only directories
+    					echo " [X] Linking files in ${file##*/}/${file2##*/}..."
+	    				mkdir -p $HOME/.config/${file2##*/} # Create DIR if not exist
+		    			ln -sf $file2/* "$HOME/.${file##*/}/${file2##*/}" # Create symlink
+                    else
+				        echo " [X] Linking ${file2##*/}..."
+		    			ln -sf $file2/* "$HOME/.${file##*/}/${file2##*/}" # Create symlink
+                    fi
 				done
 			fi
 
