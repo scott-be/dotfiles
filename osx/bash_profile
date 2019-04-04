@@ -1,6 +1,9 @@
 #############
 ## Options ##
 #############
+## Disable Bash Sessions
+export SHELL_SESSION_HISTORY=0
+
 ## Color ls
 export CLICOLOR=1
 export LSCOLORS=Exfxcxdxbxegedabagacad
