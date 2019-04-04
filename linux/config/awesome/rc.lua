@@ -262,6 +262,16 @@ globalkeys = gears.table.join(
               {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "]", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
+    awful.key({ modkey, "Shift",  }, "F2",
+              function ()
+                    awful.prompt.run {
+                      prompt       = "rename current tag: ",
+                      text         = awful.tag.selected().name,
+                      textbox      = awful.screen.focused().mypromptbox.widget,
+                      exe_callback = function (s) awful.tag.selected().name = s end,
+                  }
+            end,
+            {description = "rename tag", group = "awesome"}),
     -- End Scott's Bindings
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
