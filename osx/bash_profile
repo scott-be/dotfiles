@@ -38,6 +38,7 @@ alias subl='"/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl"'
 alias tmls='tmux ls'
 alias pyweb='python -m SimpleHTTPServer' # Quick and simple webserver
 alias exe='chmod +x'
+alias clrdns='sudo killall -HUP mDNSResponder'
 
 ##########
 ## Path ##
