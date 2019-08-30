@@ -41,6 +41,10 @@ alias pyweb='python -m SimpleHTTPServer' # Quick and simple webserver
 alias exe='chmod +x'
 alias clrdns='sudo killall -HUP mDNSResponder'
 alias now='date +%Y.%m.%d_%H.%M.%S'
+## Expand current directory structure in tree form
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+## Look busy.
+alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'"
 
 ##########
 ## Path ##
@@ -52,10 +56,12 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 ###############
 ## Functions ##
 ###############
+# You may want to put all your additions into a separate file like ~/.Bash_functions, instead of adding them here directly.
 
-## Expand current directory structure in tree form
-alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
 
-## Look busy.
-alias busy="cat /dev/urandom | hexdump -C | grep 'ca fe'"
-
+# for f in ~/.bash_functions*; do
+#   . $f;
+# done
