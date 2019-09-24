@@ -143,15 +143,15 @@ helplink=brightblue,black:
 viewunderline=brightgreen,white
 xterm=
 color_terminals=
-
 screen-256color=
+xterm-256color=
 
 [Panels]
 show_mini_info=true
 kilobyte_si=false
 mix_all_files=false
 show_backups=true
-show_dot_files=true
+show_dot_files=false
 fast_reload=false
 fast_reload_msg_shown=false
 mark_moves_down=true
