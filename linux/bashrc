@@ -56,7 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-BOLD_PROMPT=no
+BOLD_PROMPT=yes
 if [ "$color_prompt" = yes ]; then
         # Turn the prompt symbol red if the user is root
         if [ $(id -u) -eq 0 ];
