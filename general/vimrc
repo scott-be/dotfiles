@@ -19,6 +19,9 @@ command W w !sudo tee % > /dev/null
 " Disable startup screen
 set shortmess=I
 
+" Show tabline
+set showtabline=2
+
 " automatic hybrid line number toggle
 set number relativenumber
 augroup numbertoggle
