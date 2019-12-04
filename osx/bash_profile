@@ -18,6 +18,9 @@ export EDITOR='vim'
 ## Disable Bash Sessions
 SHELL_SESSION_HISTORY=0
 
+## History Ignore Spaces
+HISTCONTROL=ignoreboth
+
 ## Set History Length
 HISTSIZE=1000
 HISTFILESIZE=2000
