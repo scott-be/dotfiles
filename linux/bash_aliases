@@ -18,6 +18,7 @@ alias pyweb='python -m SimpleHTTPServer' # Quick and simple webserver
 alias pping='prettyping --nolegend'
 alias now='date +%Y.%m.%d_%H.%M.%S'
 alias now-e='date +%s'
+alias gs='git status'
 
 #############
 # Functions #
