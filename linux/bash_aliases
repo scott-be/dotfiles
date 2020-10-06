@@ -19,6 +19,13 @@ alias pping='prettyping --nolegend'
 alias now='date +%Y.%m.%d_%H.%M.%S'
 alias now-e='date +%s'
 alias gs='git status'
+alias h='history'
+alias ports='netstat -tulanp'
+alias update='sudo apt-get update && sudo apt-get upgrade'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
 
 #############
 # Functions #
