@@ -12,6 +12,9 @@ export GREP_OPTIONS='--color=auto'
 ## Set editor
 export EDITOR='vim'
 
+## Create pipenv virtualenv in project folder
+export PIPENV_VENV_IN_PROJECT=1
+
 #############
 ## History ##
 #############
@@ -63,6 +66,9 @@ alias pcp='pbcopy'
 alias wimp='curl ifconfig.co'
 alias wimip='curl ifconfig.co'
 alias gs='git status'
+alias impacket='cd ~/Tools/impacket && source venv/bin/activate'
+alias venv='source venv/bin/activate'
+# alias tmux='tmux new-session -A' # attach to session if exists, else create a new one
 
 ##########
 ## Path ##
