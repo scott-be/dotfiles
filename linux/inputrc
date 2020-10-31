@@ -4,6 +4,12 @@
 ## Arrow Down Search
 "\e[B":history-search-forward
 
+## Ctrl P Up Seach
+"\C-p":history-search-backward
+
+## Ctrl N Down Search
+"\C-n":history-search-forward
+
 ## Disable Terminal Bell
 set bell-style none
 
@@ -12,6 +18,12 @@ set bell-style none
 "\e[1;5D": backward-word
 
 ## Ctrl+backspace delete word
-"\C-H":"\C-W"
+#"\C-H":"\C-W"
+
+## Color tab completion
+set colored-stats on
+
+## Ignore case tab completion
+set completion-ignore-case on
 
 ## Tip: You can see keycodes by pressing Ctrl+v then the key.
