@@ -68,6 +68,7 @@ alias wimip='curl ifconfig.co'
 alias gs='git status'
 alias impacket='cd ~/Tools/impacket && source venv/bin/activate'
 alias venv='source venv/bin/activate'
+alias k=kubectl
 # alias tmux='tmux new-session -A' # attach to session if exists, else create a new one
 
 ##########
@@ -89,3 +90,12 @@ fi
 # for f in ~/.bash_functions*; do
 #   . $f;
 # done
+
+## Shell Completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+################
+## Kubernetes ##
+################
+source <(kubectl completion bash)
+complete -F __start_kubectl k
