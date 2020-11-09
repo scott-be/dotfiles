@@ -13,8 +13,10 @@
 ## Disable Terminal Bell
 set bell-style none
 
-## Ctrl arrow word jump
+# Right-arrow next word
 "\e[1;5C": forward-word
+
+# Left-arrow previous word
 "\e[1;5D": backward-word
 
 ## Ctrl+backspace delete word

@@ -1,11 +1,23 @@
-# Press up-arrow for previous matching command
+## Arrow Up Search
 "\e[A":history-search-backward
 
-# Press down-arrow for next matching command
+## Arrow Down Search
 "\e[B":history-search-forward
+
+## Ctrl P Up Seach
+"\C-p":history-search-backward
+
+## Ctrl N Down Search
+"\C-n":history-search-forward
 
 # Right-arrow next word
 "\e[1;5C": forward-word
 
 # Left-arrow previous word
 "\e[1;5D": backward-word
+
+## Color tab completion
+set colored-stats on
+
+## Ignore case tab completion
+set completion-ignore-case on
