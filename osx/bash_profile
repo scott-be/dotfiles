@@ -101,6 +101,7 @@ fi
 ## pipx 
 eval "$(register-python-argcomplete pipx)"
 
+## Kubernetes
 # source <(kubectl completion bash)
 # complete -F __start_kubectl k
 
