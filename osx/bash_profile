@@ -75,8 +75,10 @@ alias mkvenv='python3 -m venv venv'
 ##########
 ## Path ##
 ##########
-# export PATH="$HOME/Library/Python/2.7/bin:$PATH"
-# export PATH="$HOME/Library/Python/3.6/bin:$PATH"
+## Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+## coreutils (brew install coreutils)
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 ###############
@@ -95,28 +97,26 @@ fi
 ## Shell Completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-#####################
-## bash completion ##
-#####################
-## pipx 
+##################
+## Python Stuff ##
+##################
+## pyenv (brew install pyenv)
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+## pipx (brew install pipx)
 eval "$(register-python-argcomplete pipx)"
+export PATH="$PATH:$HOME/.local/bin"
+
+## poetry (pipx install poetry)
+export PATH="$HOME/.poetry/bin:$PATH"
 
 ## Kubernetes
 # source <(kubectl completion bash)
 # complete -F __start_kubectl k
 
-##################
-## Python Stuff ##
-##################
-## pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH="$PYENV_ROOT/bin:$PATH"
-## poetry
-export PATH="$HOME/.poetry/bin:$PATH"
-## pipx
-export PATH="$PATH:$HOME/.local/bin"
-
-complete -C /usr/local/bin/terraform terraform
+## terraform
+# complete -C /usr/local/bin/terraform terraform
 
