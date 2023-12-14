@@ -54,13 +54,14 @@ alias tmls='tmux ls'
 alias pyweb='python -m SimpleHTTPServer' # Quick and simple webserver
 alias exe='chmod +x'
 alias clrdns='sudo killall -HUP mDNSResponder'
-alias now='date +%Y.%m.%d_%H.%M.%S'
+alias now='date +%Y.%m.%d_%H.%M.%S.%Z'
 alias now-e='date +%s'
 ## Expand current directory structure in tree form
 # alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 ## Look busy.
 alias busy='cat /dev/urandom | hexdump -C | grep "ca fe" '
-alias curl-c='curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36" -H "Accept-Language: en-US,en;q=0.5" -H "Accept-Encoding: gzip, deflate"'
+# alias curl-c='curl -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36" -H "Accept-Language: en-US,en;q=0.5" -H "Accept-Encoding: gzip, deflate"'
+alias curl-c='curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"'
 alias copy='pbcopy'
 alias pcp='pbcopy'
 alias wimp='curl -s ifconfig.co'
