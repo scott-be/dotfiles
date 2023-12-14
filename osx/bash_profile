@@ -70,7 +70,7 @@ alias gs='git status'
 alias impacket='cd ~/Tools/impacket && source venv/bin/activate'
 alias venv='source venv/bin/activate'
 alias k=kubectl
-alias mkvenv='python3 -m venv venv'
+alias mkvenv='python3 -m venv venv && source venv/bin/activate'
 # alias tmux='tmux new-session -A' # attach to session if exists, else create a new one
 
 ##########
